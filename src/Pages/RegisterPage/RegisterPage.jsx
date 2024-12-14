@@ -1,29 +1,29 @@
 import { useContext } from "react"
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
-import { UserProvider } from "../../Providers/UserProvider"
 import { ValidAcess } from "../../Components/ValidAcess"
+import { UserContext } from "../../Providers/UserContext"
 
 export const RegisterPage = () => {
-    const {register,reset,handleSubmit} = useForm()
+    const {register,handleSubmit} = useForm()
     const navigate = useNavigate()
+    const { logado } = useContext(UserContext)
+    const { registerUser } = useContext(UserContext)
 
-    const userRegister = useContext(UserProvider)
-    const inLog = useContext(UserProvider)
-
-    const submit = (formData) => {
-        if(formData.password.length = 6 && formData.password == formData.Rpassword){
-            newForm = {...formData}
+    const submit = async (formData) => {
+        if(formData.password.length == 6 && formData.password == formData.Rpassword){
+            const newForm = {...formData}
             delete newForm.Rpassword
-            userRegister(newForm)
-        }else{
-            alert("A senha precisa ter 6 caracteres")
+            registerUser(newForm) 
+        }else if(formData.password.length != 6){
+            return alert("A senha precisa ter 6 caracteres")
+        }else if(formData.password != formData.Rpassword){
+           return alert("As senhas precisam ser iguais")
         }
-        reset()
     }
 
     return (
-        <>
+        <div>
             <div>
                 <img src="./src/Img/Logo.png" alt="LOGO" />
                 <button onClick={() => navigate("/")}>Voltar</button>
@@ -53,9 +53,9 @@ export const RegisterPage = () => {
                     </select>
                     <button>Cadastrar</button>                       
                 </div>
-                {inLog ?  <ValidAcess/> : null}
             </form>
-        </>
+            {logado  ?  <ValidAcess/> : null}
+        </div>
     )
 }
 export default RegisterPage

@@ -1,23 +1,19 @@
 import { useContext } from "react"
 import { useForm } from "react-hook-form"
-import { Link, useNavigate } from "react-router-dom"
-import { UserProvider } from "../../Providers/UserProvider"
-
-
+import { useNavigate } from "react-router-dom"
+import { UserContext } from "../../Providers/UserContext"
 
 export const LoginPage = () => {
     const {register, handleSubmit} = useForm()
     const navigate = useNavigate()
+    const { userLogin } = useContext(UserContext)
 
-    const userLogin = useContext(UserProvider)
-    
-    const submit = (formData) => {
+    const submit = async (formData) => {
         userLogin(formData)
     } 
 
-    
     return (
-        <>
+        <div>
             <form onSubmit={handleSubmit(submit)}>
                 <img src="./src/Img/Logo.png" alt="LOGO" />
                 <h1>Login</h1>
@@ -33,7 +29,7 @@ export const LoginPage = () => {
                 <button onClick={() => navigate("/register")}>Cadastre-se</button>
             </div>
         
-        </>
+        </div>
     )
 }
 export default LoginPage

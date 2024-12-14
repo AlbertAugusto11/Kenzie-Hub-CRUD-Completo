@@ -1,15 +1,16 @@
 import { useContext } from "react"
-import { UserProvider } from "../Providers/UserProvider"
+import { UserContext } from "../Providers/UserContext.jsx"
 
  export const ValidAcess = () => {
-    const inLog = useContext(UserProvider)
-    const setInLog = useContext(UserProvider)
+    const { logado } = useContext(UserContext)
+    const { setLogado } = useContext(UserContext)
 
     return(
         <div>
-            <img src={inLog == "true" ? "./src/Img/true.png" : "./src/Img/false.png"} alt={valid == "true" ? "TRUE" : "FALSE"} />
-            <p>{valid == "true" ? "Conta criada com sucesso" : "Ops! Algo deu errado"}</p>
-            <button onClick={() => setInLog(null)}>X</button>
+            <img src={logado == true ? "./src/Img/true.png" : "./src/Img/false.png"} alt={logado == true ? "TRUE" : "FALSE"} />
+            <p>{logado == true ? "Conta criada com sucesso" : "Ops! Algo deu errado"}</p>
+            <button onClick={() => setLogado(false)}>X</button>
         </div>
     )
  }
+ export default ValidAcess
