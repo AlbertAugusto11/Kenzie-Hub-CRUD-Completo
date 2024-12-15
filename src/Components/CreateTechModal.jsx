@@ -6,6 +6,12 @@ import "../Styles/modalCreate.scss"
 export const CreateTechModal = () => {
     const {register, reset, handleSubmit} = useForm()
     const {setIsOpen1} = useContext(TechContext)
+    const {createTech} = useContext(TechContext)
+
+    const submit = async (formData) =>{
+        createTech(formData)
+        reset()
+    }
 
 
     return(
@@ -15,7 +21,7 @@ export const CreateTechModal = () => {
                     <h3>Cadastrar Tecnologias</h3>
                     <button onClick={() => setIsOpen1(false)}>x</button>
                 </div>
-                <form>
+                <form onSubmit={handleSubmit(submit)}>
                     <label htmlFor="name">Nome</label>
                     <input id="name" type="text" {...register ("title")}/>
                     <label htmlFor="status">Selecionar Status</label>

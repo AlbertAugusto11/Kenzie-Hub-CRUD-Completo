@@ -13,7 +13,6 @@ export const UserProvider = ({children}) => {
     useEffect(() => {
         const loadUser = async () => {
            const token = localStorage.getItem("@TOKEN");
-  
            if (token) {
               try {
                  const { data } = await api.get("/profile", {
@@ -35,6 +34,7 @@ export const UserProvider = ({children}) => {
         try{
             const {data} = await api.post("/sessions", formData)
             localStorage.setItem("@TOKEN", data.token)
+            localStorage.setItem("@ID", data.user.id)
             setUser(data.user)
             navigate("/home")
         }catch(error){
@@ -42,9 +42,10 @@ export const UserProvider = ({children}) => {
         }
     }
     const userLogout = () => {
-        localStorage.removeItem("@TOKEN");
-        setUser(null);
-        navigate("/");
+        localStorage.removeItem("@TOKEN")
+        localStorage.removeItem("@ID")
+        setUser(null)
+        navigate("/")
      };
     const registerUser = async (formData) => {
         try{

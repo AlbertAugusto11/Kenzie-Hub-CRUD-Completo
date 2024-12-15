@@ -4,17 +4,19 @@ import { TechContext } from "../Providers/TechContext"
 import "../Styles/modalEdit.scss"
 
 export const EditTechModal = () => {
-    const { editTech } = useContext(TechContext)
-    const {register, reset, handleSubmit} = useForm({
+    const { editTech, updataTech } = useContext(TechContext)
+    const {register,handleSubmit} = useForm({
         values:{
             title: editTech.title,
             status: editTech.status,
         }
     })
     const { setIsOpen2 } = useContext(TechContext)
-    submit = async (formData) => {
 
+    const submit = async (formData) => {
+        updataTech(formData,editTech.id)
     }
+
 
     return(
         <div className="modalOverlay" role="dialog">
