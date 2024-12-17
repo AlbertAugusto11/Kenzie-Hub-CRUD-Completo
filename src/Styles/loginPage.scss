@@ -1,0 +1,159 @@
+.login__Page{
+    background-color: var(--grey-4);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    img{
+        width: 9.375rem;
+        height: 1.25rem;
+    }
+    form{
+        width: 23.125rem;
+        height: 31.375rem;
+        background-color: var(--grey-3);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        border-radius: 4px;
+        h1{
+            font-size: var(--title1);
+            color: var(--grey-0);
+            text-align: center;
+        }
+        label{
+            color: var(--grey-0);
+            font-size: var(--headline);
+        }
+        input{
+            width: 20.625rem;
+            height: 3rem;
+            background-color: var(--grey-2);
+            border: 1.22px solid var(--grey-0);
+            border-radius: 4px;
+            color: var(--grey-0);
+            padding-left: 1rem;
+        }
+        .button__login{
+            width: 20.625rem;
+            height: 3rem;
+            background-color: var(--color-primary);
+            border: 1.22px solid var(--color-primary);
+            border-radius: 4.06px;
+            color: #ffffff;
+            &:hover{
+                cursor: pointer;
+                background-color: var(--color-Pfocus);
+            }
+        }
+        .div__form{
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            gap: 1rem;
+            span{
+                font-size: var(--headline);
+                color: var(--grey-1);
+                font-weight: bold;
+                text-align: center;
+            }
+            .button__register{
+                width: 20.625rem;
+                height: 3rem;
+                background-color: var(--grey-1);
+                border: 1.22px solid var(--grey-1);
+                border-radius: 4.06px;
+                color: #ffffff;
+                &:hover{
+                    cursor: pointer;
+                    background-color: var(--grey-2);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .login__Page{
+        background-color: var(--grey-4);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        img{
+            width: 9.375rem;
+            height: 1.25rem;
+        }
+        form{
+            width: 19.125rem;
+            height: 27.375rem;
+            background-color: var(--grey-3);
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1rem;
+            border-radius: 4px;
+            h1{
+                font-size: var(--title1);
+                color: var(--grey-0);
+                text-align: center;
+            }
+            label{
+                color: var(--grey-0);
+                font-size: var(--headline);
+            }
+            input{
+                width: 16.625rem;
+                height: 2.5rem;
+                background-color: var(--grey-2);
+                border: 1.22px solid var(--grey-0);
+                border-radius: 4px;
+                color: var(--grey-0);
+                padding-left: 1rem;
+            }
+            .button__login{
+                width: 16.625rem;
+                height: 2.5rem;
+                background-color: var(--color-primary);
+                border: 1.22px solid var(--color-primary);
+                border-radius: 4.06px;
+                color: #ffffff;
+                &:hover{
+                    cursor: pointer;
+                    background-color: var(--color-Pfocus);
+                }
+            }
+            .div__form{
+                display: flex;
+                flex-direction: column;
+                margin-top: 2rem;
+                gap: 1rem;
+                span{
+                    font-size: var(--headline);
+                    color: var(--grey-1);
+                    font-weight: bold;
+                    text-align: center;
+                }
+                .button__register{
+                    width: 16.625rem;
+                    height: 2.5rem;
+                    background-color: var(--grey-1);
+                    border: 1.22px solid var(--grey-1);
+                    border-radius: 4.06px;
+                    color: #ffffff;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: var(--grey-2);
+                    }
+                }
+            }
+        }
+    }
+}

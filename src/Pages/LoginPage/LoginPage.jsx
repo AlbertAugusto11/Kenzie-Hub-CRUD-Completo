@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 import { UserContext } from "../../Providers/UserContext"
+import "../../Styles/loginPage.scss"
 
 export const LoginPage = () => {
     const {register, handleSubmit} = useForm()
@@ -13,22 +14,20 @@ export const LoginPage = () => {
     } 
 
     return (
-        <div>
+        <div className="login__Page">
+            <img src="./src/Img/Logo.png" alt="LOGO" />
             <form onSubmit={handleSubmit(submit)}>
-                <img src="./src/Img/Logo.png" alt="LOGO" />
                 <h1>Login</h1>
                 <label htmlFor="email">Email</label>
                 <input id="email" type="text" placeholder="Digite seu Email" {...register ("email")}/>
                 <label htmlFor="password">Senha</label>
-                <input id="password" type="text" placeholder="Digite sua Senha" {...register ("password")}/>
-                <button>Entrar</button>
-
+                <input id="password" type="password" placeholder="Digite sua Senha" {...register ("password")}/>
+                <button className="button__login">Entrar</button>
+                <div className="div__form">
+                    <span>Ainda não possui conta?</span>
+                    <button className="button__register" onClick={() => navigate("/register")}>Cadastre-se</button>
+                </div>
             </form>
-            <div>
-                <p>Ainda não possui conta?</p>
-                <button onClick={() => navigate("/register")}>Cadastre-se</button>
-            </div>
-        
         </div>
     )
 }
