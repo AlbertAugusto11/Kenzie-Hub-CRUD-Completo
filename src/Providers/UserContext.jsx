@@ -7,7 +7,7 @@ export const UserContext = createContext({})
 export const UserProvider = ({children}) => {
 
     const [user, setUser] = useState(null)
-    const [logado, setLogado ] = useState(false)
+    const [logado, setLogado ] = useState(null)
     const navigate = useNavigate()
 
     useEffect(() => {

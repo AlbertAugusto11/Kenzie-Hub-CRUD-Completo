@@ -55,7 +55,7 @@ export const RegisterPage = () => {
                 </select>
                 <button className="button__Register">Cadastrar</button>
             </form>
-            {logado  ?  <ValidAcess/> : null}
+            {logado !== null  ?  <ValidAcess/> : null}
         </div>
     )
 }
