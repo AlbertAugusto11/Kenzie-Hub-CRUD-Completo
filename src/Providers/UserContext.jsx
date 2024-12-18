@@ -1,6 +1,6 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react"
 import {api} from "../Services/api.js"
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 export const UserContext = createContext({})
 
@@ -12,7 +12,7 @@ export const UserProvider = ({children}) => {
 
     useEffect(() => {
         const loadUser = async () => {
-           const token = localStorage.getItem("@TOKEN");
+           const token = localStorage.getItem("@TOKEN")
            if (token) {
               try {
                  const { data } = await api.get("/profile", {
@@ -20,11 +20,12 @@ export const UserProvider = ({children}) => {
                        Authorization: `Bearer ${token}`,
                     },
                  });
-                 setUser(data);
-                 navigate("/home");
+                 setUser(data)
+                 navigate("/home")
               } catch (error) {
-                 console.log(error);
-                 localStorage.removeItem("@TOKEN");
+                 console.log(error)
+                 localStorage.removeItem("@TOKEN")
+                 localStorage.removeItem("@ID")
               }
            }
         };
