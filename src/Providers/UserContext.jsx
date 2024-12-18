@@ -28,9 +28,10 @@ export const UserProvider = ({children}) => {
                  localStorage.removeItem("@ID")
               }
            }
-        };
-        loadUser();
-     }, []); 
+        }
+        loadUser()
+     }, [])
+    
     const userLogin = async (formData)  => {
         try{
             const {data} = await api.post("/sessions", formData)
@@ -47,7 +48,7 @@ export const UserProvider = ({children}) => {
         localStorage.removeItem("@ID")
         setUser(null)
         navigate("/")
-     };
+     }
     const registerUser = async (formData) => {
         try{
             await api.post("/users", formData)

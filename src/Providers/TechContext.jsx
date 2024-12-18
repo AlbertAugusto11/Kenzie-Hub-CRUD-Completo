@@ -20,6 +20,7 @@ export const TechProvider = ({children}) => {
         }
         loadTechs()
     })
+
     const createTech = async (formData) => {
         try{
            const token = localStorage.getItem("@TOKEN")
