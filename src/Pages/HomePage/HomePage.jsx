@@ -4,6 +4,7 @@ import { TechContext } from "../../Providers/TechContext"
 import CreateTechModal from "../../Components/CreateTechModal"
 import EditTechModal from "../../Components/EditTechModal"
 import TechList from "../../Components/TechList"
+import  Logo  from "../../Img/Logo.png"
 import "../../Styles/homePage.scss"
 
 export const HomePage = () => {
@@ -14,7 +15,7 @@ export const HomePage = () => {
         <div className="div__HomePage">
             <div className="div__NavBar">
                 <div>
-                    <img src="./src/Img/Logo.png" alt="LOGO" />
+                    <img src={Logo} alt="LOGO" />
                     <button onClick={() => userLogout()}>Sair</button>
                 </div>
             </div>

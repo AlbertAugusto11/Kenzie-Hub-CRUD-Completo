@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 import { UserContext } from "../../Providers/UserContext"
+import  Logo  from "../../Img/Logo.png"
 import "../../Styles/loginPage.scss"
 
 export const LoginPage = () => {
@@ -15,7 +16,7 @@ export const LoginPage = () => {
 
     return (
         <div className="login__Page">
-            <img src="./src/Img/Logo.png" alt="LOGO" />
+            <img src={Logo} alt="LOGO" />
             <form onSubmit={handleSubmit(submit)}>
                 <h1>Login</h1>
                 <label htmlFor="email">Email</label>

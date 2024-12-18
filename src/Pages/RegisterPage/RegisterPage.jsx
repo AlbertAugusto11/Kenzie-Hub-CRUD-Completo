@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 import { ValidAcess } from "../../Components/ValidAcess"
 import { UserContext } from "../../Providers/UserContext"
+import  Logo  from "../../Img/Logo.png"
 import "../../Styles/registerPage.scss"
 
 export const RegisterPage = () => {
@@ -27,7 +28,7 @@ export const RegisterPage = () => {
     return (
         <div className="register__Page">
             <div className="div__img">
-                <img src="./src/Img/Logo.png" alt="LOGO" />
+                <img src={Logo} alt="LOGO" />
                 <button className="button__div" onClick={() => navigate("/")}>Voltar</button>
             </div>
             <form onSubmit={handleSubmit(submit)}>
