@@ -1,25 +1,30 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { useForm } from "react-hook-form"
 import { TechContext } from "../Providers/TechContext"
+import { pressOut } from "../hooksCustomized/pressOut.js"
+import { pressKey } from "../hooksCustomized/pressKey.js"
 import "../Styles/modalCreate.scss"
 
 export const CreateTechModal = () => {
     const {register, reset, handleSubmit} = useForm()
-    const {setIsOpen1} = useContext(TechContext)
-    const {createTech} = useContext(TechContext)
+    const {setIsOpen1, createTech} = useContext(TechContext)
 
     const submit = async (formData) =>{
         createTech(formData)
         reset()
     }
+    const modalRef = pressOut(() =>{
+        setIsOpen1(false)
+    })
+    const buttonRef = pressKey("Escape")
 
 
     return(
         <div className="modalOverlay" role="dialog">
-            <div className="box__ModalCreate">
+            <div ref={modalRef} className="box__ModalCreate">
                 <div>
                     <h3>Cadastrar Tecnologias</h3>
-                    <button onClick={() => setIsOpen1(false)}>X</button>
+                    <button ref={buttonRef} onClick={() => setIsOpen1(false)}>X</button>
                 </div>
                 <form onSubmit={handleSubmit(submit)}>
                     <label htmlFor="name">Nome</label>

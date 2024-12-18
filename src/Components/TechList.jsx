@@ -4,9 +4,7 @@ import TechCard from "./TechCard"
 import "../Styles/techList.scss"
 
 export const TechList = () =>{
-    const {setIsOpen2} = useContext(TechContext)
-    const {setIsOpen1} = useContext(TechContext)
-    const {listTech} = useContext(TechContext)
+    const {setIsOpen1, listTech} = useContext(TechContext)
 
     return(
         <div className="div__TechList">

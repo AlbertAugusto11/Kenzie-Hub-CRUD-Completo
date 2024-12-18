@@ -88,3 +88,83 @@
 
     }
 }
+
+@media (max-width: 500px) {
+    .box__ModalEdit{
+        position: relative;
+        width: 100%;
+        max-width: 17.025rem;
+        background: #fff;
+        div{
+            width: 100%;
+            height: 3.125rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            background-color: var(--grey-2);
+            h3{
+                font-size: var(--title3);
+                color: var(--grey-0);
+            }
+            button{
+                width: 0.7rem;
+                height: 1.65rem;
+                border: none;
+                color: var(--grey-1);
+                background-color: var(--grey-2);
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: var(--grey-3);
+            label{
+                font-size: var(--headline);
+                color: var(--grey-0);
+            }
+            input{
+                width: 15.625rem;
+                height: 2.7rem;
+                background-color: var(--grey-2);
+                padding-left: 0.5rem;
+                color: var(--grey-0);
+                border: 1.22px solid var(--grey-0);
+                border-radius: 4px;
+                align-self: center;
+            }
+            select{
+                width: 15.625rem;
+                height: 2.7rem;
+                background-color: var(--grey-2);
+                padding-left: 0.5rem;
+                color: var(--grey-0);
+                border: 1.22px solid var(--grey-0);
+                border-radius: 4px;
+                align-self: center;
+            }
+            button{
+                width: 15.625rem;
+                height: 2.7rem;
+                border-radius: 4px;
+                background-color: var(--color-primary);
+                border: 1.22px solid var(--color-primary);
+                color: var(--grey-0);
+                align-self: center;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+    
+        }
+    }
+}

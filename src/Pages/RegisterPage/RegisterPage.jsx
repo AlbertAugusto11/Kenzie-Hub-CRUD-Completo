@@ -8,8 +8,7 @@ import "../../Styles/registerPage.scss"
 export const RegisterPage = () => {
     const {register,reset,handleSubmit} = useForm()
     const navigate = useNavigate()
-    const { logado } = useContext(UserContext)
-    const { registerUser } = useContext(UserContext)
+    const { logado, registerUser } = useContext(UserContext)
 
     const submit = async (formData) => {
         if(formData.password.length == 6 && formData.password == formData.Rpassword){
@@ -35,13 +34,13 @@ export const RegisterPage = () => {
                 <h1>Crie sua Conta</h1>
                 <span>Rápido e grátis, vamos nessa.</span>
                 <label htmlFor="name">Nome</label>
-                <input id="name" type="text" placeholder="Digite seu nome" {...register ("name")}/>
+                <input id="name" type="text" placeholder="Digite seu nome" {...register ("name")} required/>
                 <label htmlFor="email">Email</label>
-                <input id="email" type="text" placeholder="Digite seu email" {...register ("email")}/>
+                <input id="email" type="text" placeholder="Digite seu email" {...register ("email")} required/>
                 <label htmlFor="password">Senha</label>
-                <input id="password" type="password" placeholder="Digite sua senha" {...register ("password")}/>
+                <input id="password" type="password" placeholder="Digite sua senha" {...register ("password")} required/>
                 <label htmlFor="Rpassword">Confirmar Senha</label>
-                <input id="Rpassword" type="password" placeholder="Digite novamente sua senha" {...register ("Rpassword")}/>
+                <input id="Rpassword" type="password" placeholder="Digite novamente sua senha" {...register ("Rpassword")} required/>
                 <label htmlFor="bio">Bio</label>
                 <input id="bio" type="text" placeholder="Fale sobre você" {...register ("bio")}/>
                 <label htmlFor="contact">Contato</label>

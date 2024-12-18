@@ -7,10 +7,8 @@ import TechList from "../../Components/TechList"
 import "../../Styles/homePage.scss"
 
 export const HomePage = () => {
-    const {user} = useContext(UserContext)
-    const {userLogout} = useContext(UserContext)
-    const {isOpen1} = useContext(TechContext)
-    const {isOpen2} = useContext(TechContext)
+    const {user, userLogout} = useContext(UserContext)
+    const {isOpen1 , isOpen2} = useContext(TechContext)
 
     return(
         <div className="div__HomePage">

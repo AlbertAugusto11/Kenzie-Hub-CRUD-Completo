@@ -4,6 +4,7 @@ import "../Styles/techCard.scss"
 
 export const TechCard = ({element}) => {
     const {setEditTech,setIsOpen2,deleteTech} = useContext(TechContext)
+    
     return(
         <li>
             <p>{element.title}</p>
