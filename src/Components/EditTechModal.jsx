@@ -23,7 +23,7 @@ export const EditTechModal = () => {
             <div className="box__ModalEdit">
                 <div>
                     <h3>Tecnologias Detalhes</h3>
-                    <button onClick={() => setIsOpen2(false)}>x</button>
+                    <button onClick={() => setIsOpen2(false)}>X</button>
                 </div>
                 <form onSubmit={handleSubmit(submit)}>
                     <label htmlFor="name">Nome</label>

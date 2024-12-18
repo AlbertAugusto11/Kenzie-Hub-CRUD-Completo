@@ -1,0 +1,135 @@
+li{
+    width: 45.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--grey-4);
+    border-radius: 4px;
+    padding: 0.7rem;
+    p{
+        font-size: var(--p);
+        color: #ffffff;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.9rem;
+        span{
+            font-size: var(--headline);
+            color: var(--grey-1);
+        }
+        .edit__buton{
+            background-image: url("../Img/edit.png");
+            width: 13px;
+            height: 13px;
+            background-color: var(--grey-4);
+            border: none;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .delete__buton{
+            background-image: url("../Img/delete.png");
+            width: 13px;
+            height: 14px;
+            background-color: var(--grey-4);
+            border: none;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 805px) {
+    li{
+        width: 31.75rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--grey-4);
+        border-radius: 4px;
+        padding: 0.7rem;
+        p{
+            font-size: var(--p);
+            color: #ffffff;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.9rem;
+            span{
+                font-size: var(--headline);
+                color: var(--grey-1);
+            }
+            .edit__buton{
+                background-image: url("../Img/edit.png");
+                width: 13px;
+                height: 13px;
+                background-color: var(--grey-4);
+                border: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .delete__buton{
+                background-image: url("../Img/delete.png");
+                width: 13px;
+                height: 14px;
+                background-color: var(--grey-4);
+                border: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    li{
+        width: 17.75rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--grey-4);
+        border-radius: 4px;
+        padding: 0.7rem;
+        p{
+            font-size: var(--p);
+            color: #ffffff;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.9rem;
+            span{
+                font-size: var(--headline);
+                color: var(--grey-1);
+            }
+            .edit__buton{
+                background-image: url("../Img/edit.png");
+                width: 13px;
+                height: 13px;
+                background-color: var(--grey-4);
+                border: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .delete__buton{
+                background-image: url("../Img/delete.png");
+                width: 13px;
+                height: 14px;
+                background-color: var(--grey-4);
+                border: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

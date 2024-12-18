@@ -4,6 +4,7 @@ import { TechContext } from "../../Providers/TechContext"
 import CreateTechModal from "../../Components/CreateTechModal"
 import EditTechModal from "../../Components/EditTechModal"
 import TechList from "../../Components/TechList"
+import "../../Styles/homePage.scss"
 
 export const HomePage = () => {
     const {user} = useContext(UserContext)
@@ -12,19 +13,23 @@ export const HomePage = () => {
     const {isOpen2} = useContext(TechContext)
 
     return(
-        <>
-            <div>
-                <img src="./src/Img/Logo.png" alt="LOGO" />
-                <button onClick={() => userLogout()}>Sair</button>
+        <div className="div__HomePage">
+            <div className="div__NavBar">
+                <div>
+                    <img src="./src/Img/Logo.png" alt="LOGO" />
+                    <button onClick={() => userLogout()}>Sair</button>
+                </div>
             </div>
             <header>
-                <h1>Olá, {user.name}</h1>
-                <p>{user.course_module}</p>
+                <div>
+                    <h1>Olá, {user.name}</h1>
+                    <span>{user.course_module}</span>
+                </div>
             </header>
             <TechList/>                
             {isOpen1 ? <CreateTechModal/> : null}
             {isOpen2 ? <EditTechModal/> : null}
-        </>
+        </div>
     )
 }
 export default HomePage

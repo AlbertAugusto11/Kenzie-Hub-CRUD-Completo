@@ -19,7 +19,7 @@ export const CreateTechModal = () => {
             <div className="box__ModalCreate">
                 <div>
                     <h3>Cadastrar Tecnologias</h3>
-                    <button onClick={() => setIsOpen1(false)}>x</button>
+                    <button onClick={() => setIsOpen1(false)}>X</button>
                 </div>
                 <form onSubmit={handleSubmit(submit)}>
                     <label htmlFor="name">Nome</label>

@@ -1,0 +1,135 @@
+.div__TechList{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--grey-4);
+    .div__header{
+        width: 48.75rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        margin-top: 1.5rem;
+        p{
+            font-size: var(--p);
+            color: var(--grey-0);
+        }
+        button{
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: var(--grey-3);
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    ul{
+        width: 48.75rem;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--grey-3);
+        border-radius: 4px;
+        margin-bottom: 2rem;
+        align-self: center;
+        list-style: none;
+        padding: 1.3rem;
+        gap: 0.7rem;
+    }
+}
+
+@media (max-width: 805px) {
+    .div__TechList{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color: var(--grey-4);
+        .div__header{
+            width: 34.75rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-self: center;
+            margin-top: 1.5rem;
+            p{
+                font-size: var(--p);
+                color: var(--grey-0);
+            }
+            button{
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: var(--grey-3);
+                color: #ffffff;
+                border: none;
+                border-radius: 4px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        ul{
+            width: 34.75rem;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--grey-3);
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            align-self: center;
+            list-style: none;
+            padding: 1.3rem;
+            gap: 0.7rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .div__TechList{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color: var(--grey-4);
+        .div__header{
+            width: 19.75rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-self: center;
+            margin-top: 1.5rem;
+            p{
+                font-size: var(--p);
+                color: var(--grey-0);
+            }
+            button{
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: var(--grey-3);
+                color: #ffffff;
+                border: none;
+                border-radius: 4px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        ul{
+            width: 19.75rem;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--grey-3);
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            align-self: center;
+            list-style: none;
+            padding: 1.3rem;
+            gap: 0.7rem;
+        }
+    }
+}
