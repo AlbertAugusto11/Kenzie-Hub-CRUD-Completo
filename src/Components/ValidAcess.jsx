@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { UserContext } from "../Providers/UserContext.jsx"
 import "../Styles/validAcess.scss"
+import ImgTrue from "../Img/true.png"
+import ImgFalse from "../Img/false.png"
 
  export const ValidAcess = () => {
     const { logado } = useContext(UserContext)
@@ -8,7 +10,7 @@ import "../Styles/validAcess.scss"
 
     return(
         <div className="valid__Acess">
-            <img src={logado == true ? "./src/Img/true.png" : "./src/Img/false.png"} alt={logado == true ? "TRUE" : "FALSE"} />
+            <img src={logado == true ? ImgTrue : ImgFalse} alt={logado == true ? "TRUE" : "FALSE"} />
             <h3>{logado == true ? "Conta criada com sucesso" : "Ops! Algo deu errado"}</h3>
             <button onClick={() => setLogado(null)}>X</button>
         </div>
