@@ -8,18 +8,19 @@ export const TechProvider = ({children}) => {
     const [editTech, setEditTech] = useState(null)
     const [listTech, setListTech] = useState([])
 
-    useEffect(() =>{
-        const loadTechs = async () => {
-            try{
-                const id = localStorage.getItem("@ID")
-                const {data} = await api.get(`/users/${id}`)
-                setListTech(data.techs)
-            }catch(error){
-                console.log(error)
-            }
+    const loadTechs = async () => {
+        try{
+            const id = localStorage.getItem("@ID")
+            const {data} = await api.get(`/users/${id}`)
+            setListTech(data.techs)
+        }catch(error){
+            console.log(error)
         }
+    }
+
+    useEffect(() =>{
         loadTechs()
-    })
+    },[])
 
     const createTech = async (formData) => {
         try{
@@ -29,6 +30,7 @@ export const TechProvider = ({children}) => {
                     Authorization: `Bearer ${token}`,
                 }
             })
+        loadTechs()
         }catch(error){
             console.log(error)
         }
@@ -41,6 +43,7 @@ export const TechProvider = ({children}) => {
                     Authorization: `Bearer ${token}`,
                 }
             })
+            loadTechs()
         }catch(error){
             console.log(error)
         }
@@ -53,6 +56,7 @@ export const TechProvider = ({children}) => {
                     Authorization: `Bearer ${token}`,
                 }
             })
+            loadTechs()
         }catch(error){
             console.log(error)
         }
